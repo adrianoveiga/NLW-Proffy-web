@@ -2,9 +2,8 @@ import React from 'react';
 
 import PageHeader from '../../components/PageHeader';
 
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
-
 import './styles.css';
+import TeacherItem from '../../components/TeacherItem';
 
 function TeacherList() {
   return (
@@ -29,32 +28,10 @@ function TeacherList() {
       </PageHeader>
 
       <main>
-        <article className="teacher-item">
-          <header>
-            <img src="https://i.pravatar.cc/150" alt="Avatar"/>
-            <div>
-              <strong>John Doe</strong>
-              <span>Química</span>
-            </div>
-          </header>
-
-          <p>
-            Entusiasta das melhores tecnologias de química avançada.
-            <br/><br/>
-            Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.
-          </p>
-
-          <footer>
-            <p>
-              Preço/hora
-              <strong>R$ 20,00</strong>
-            </p>
-            <button type="button">
-              <img src={whatsappIcon} alt="Whatsapp"/>
-              Entrar em contato
-            </button>
-          </footer>
-        </article>
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
       </main>
     </div>
   );
