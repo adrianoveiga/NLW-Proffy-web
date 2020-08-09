@@ -1,0 +1,50 @@
+.select-block {
+    position: relative;
+}
+
+/* DICA: o seletor abaixo usando o "+" indica que será aplicado
+    ao elemento que vier depois do definido anteriormente.
+    Ou seja, apenas os .select-block que vierem DEPOIS de um outro
+    .select-block irão ser afetados com uma margem adicional.
+*/
+.select-block + .select-block {
+    margin-top: 1.4rem;
+}
+
+.select-block label {
+    font-size: 1.4rem;
+}
+
+.select-block select {
+    width: 100%;
+    height: 5.6rem;
+    margin-top: 0.8rem;
+    border-radius: 0.8rem;
+    background: var(--color-input-background);
+    border: 1px solid var(--color-line-in-white);
+    outline: 0;
+    padding: 0 1.6rem;
+    font: 1.6rem Archivo;
+}
+
+/* DICA: A pseudo-classe ":focus-within" permite estilizar
+    o input-block em si, SE algum input dentro dele estiver
+    com o foco. Repare que é diferente de usar o :focus no
+    input, pois isso iria estilizar o input e não a div que
+    o encapsula.
+
+    OBS: Neste exemplo, além da pseudo-classe, é utilizado o
+    pseudo-elemento "::after" para inserir conteúdo ao final
+    do elemento selecionado (no caso o input-block que tiver
+    um input em foco).
+*/
+.select-block:focus-within::after {
+    width: calc(100% - 3.2rem);
+    height: 2px;
+    content: '';
+    background: var(--color-primary-light);
+    position: absolute;
+    left: 1.6rem;
+    right: 1.6rem;
+    bottom: 0;
+}
