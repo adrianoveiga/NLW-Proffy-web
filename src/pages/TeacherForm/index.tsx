@@ -52,10 +52,13 @@ function TeacherForm() {
 
         <fieldset>
           <legend>
-            Horários disponíveis
-            <button type="button">
-              + Novo horário
-            </button>
+            {/* NOTA: Essa div só existe para compatibilidade do flex entre Firefox e Chrome (sem ela não funciona corretamente no FF) */}
+            <div>
+              Horários disponíveis
+              <button type="button">
+                + Novo horário
+              </button>
+            </div>
           </legend>
 
           <div className="schedule-item">
