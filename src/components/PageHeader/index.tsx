@@ -13,6 +13,7 @@ import './styles.css'
 //   param?: type;   (opcional)
 interface PageHeaderProps {
   title: string;
+  description?: string;
 }
 
 
@@ -31,6 +32,9 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
 
       <div className="header-content">
         <strong>{props.title}</strong>
+        {/* IF implicito: Apenas executa a segunda operacao do && se a 1a for True */}
+        { props.description && <p>{props.description}</p> }
+
         {props.children}
       </div>
     </header>
